@@ -23,23 +23,23 @@ Partial Class TicketView
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.btnDownloadFile1 = New System.Windows.Forms.Button()
+        Me.btnDownloadFile2 = New System.Windows.Forms.Button()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.btnDownloadFile2 = New System.Windows.Forms.Button()
-        Me.btnDownloadFile1 = New System.Windows.Forms.Button()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -53,7 +53,7 @@ Partial Class TicketView
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 320.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 115.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 104.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 146.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.ComboBox2, 4, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
@@ -88,6 +88,14 @@ Partial Class TicketView
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(776, 426)
         Me.TableLayoutPanel1.TabIndex = 0
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(633, 31)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(140, 21)
+        Me.ComboBox2.TabIndex = 12
         '
         'Label1
         '
@@ -134,15 +142,6 @@ Partial Class TicketView
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Usuario Asignado"
         '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(3, 138)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(65, 13)
-        Me.Label6.TabIndex = 5
-        Me.Label6.Text = "Comentarios"
-        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -152,15 +151,14 @@ Partial Class TicketView
         Me.Label7.TabIndex = 6
         Me.Label7.Text = "Adjuntos"
         '
-        'TextBox1
+        'Label6
         '
-        Me.TableLayoutPanel1.SetColumnSpan(Me.TextBox1, 3)
-        Me.TextBox1.Location = New System.Drawing.Point(3, 158)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TableLayoutPanel1.SetRowSpan(Me.TextBox1, 3)
-        Me.TextBox1.Size = New System.Drawing.Size(520, 225)
-        Me.TextBox1.TabIndex = 7
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(3, 138)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(65, 13)
+        Me.Label6.TabIndex = 5
+        Me.Label6.Text = "Comentarios"
         '
         'Label8
         '
@@ -171,6 +169,60 @@ Partial Class TicketView
         Me.Label8.Size = New System.Drawing.Size(92, 13)
         Me.Label8.TabIndex = 8
         Me.Label8.Text = "Nombre Adjunto 1"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(633, 3)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(140, 21)
+        Me.ComboBox1.TabIndex = 11
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Location = New System.Drawing.Point(633, 57)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(140, 21)
+        Me.ComboBox3.TabIndex = 13
+        '
+        'btnDownloadFile1
+        '
+        Me.btnDownloadFile1.Location = New System.Drawing.Point(633, 158)
+        Me.btnDownloadFile1.Name = "btnDownloadFile1"
+        Me.btnDownloadFile1.Size = New System.Drawing.Size(140, 23)
+        Me.btnDownloadFile1.TabIndex = 14
+        Me.btnDownloadFile1.Text = "Descargar"
+        Me.btnDownloadFile1.UseVisualStyleBackColor = True
+        '
+        'btnDownloadFile2
+        '
+        Me.btnDownloadFile2.Location = New System.Drawing.Point(633, 195)
+        Me.btnDownloadFile2.Name = "btnDownloadFile2"
+        Me.btnDownloadFile2.Size = New System.Drawing.Size(140, 23)
+        Me.btnDownloadFile2.TabIndex = 16
+        Me.btnDownloadFile2.Text = "Descargar"
+        Me.btnDownloadFile2.UseVisualStyleBackColor = True
+        '
+        'Label9
+        '
+        Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(532, 201)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(92, 13)
+        Me.Label9.TabIndex = 15
+        Me.Label9.Text = "Nombre Adjunto 2"
+        '
+        'TextBox1
+        '
+        Me.TableLayoutPanel1.SetColumnSpan(Me.TextBox1, 3)
+        Me.TextBox1.Location = New System.Drawing.Point(3, 158)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TableLayoutPanel1.SetRowSpan(Me.TextBox1, 3)
+        Me.TextBox1.Size = New System.Drawing.Size(520, 225)
+        Me.TextBox1.TabIndex = 7
         '
         'TextBox2
         '
@@ -189,58 +241,6 @@ Partial Class TicketView
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(520, 78)
         Me.TextBox3.TabIndex = 10
-        '
-        'Label9
-        '
-        Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(532, 201)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(92, 13)
-        Me.Label9.TabIndex = 15
-        Me.Label9.Text = "Nombre Adjunto 2"
-        '
-        'btnDownloadFile2
-        '
-        Me.btnDownloadFile2.Location = New System.Drawing.Point(633, 195)
-        Me.btnDownloadFile2.Name = "btnDownloadFile2"
-        Me.btnDownloadFile2.Size = New System.Drawing.Size(140, 23)
-        Me.btnDownloadFile2.TabIndex = 16
-        Me.btnDownloadFile2.Text = "Descargar"
-        Me.btnDownloadFile2.UseVisualStyleBackColor = True
-        '
-        'btnDownloadFile1
-        '
-        Me.btnDownloadFile1.Location = New System.Drawing.Point(633, 158)
-        Me.btnDownloadFile1.Name = "btnDownloadFile1"
-        Me.btnDownloadFile1.Size = New System.Drawing.Size(140, 23)
-        Me.btnDownloadFile1.TabIndex = 14
-        Me.btnDownloadFile1.Text = "Descargar"
-        Me.btnDownloadFile1.UseVisualStyleBackColor = True
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(633, 57)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(140, 21)
-        Me.ComboBox3.TabIndex = 13
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(633, 3)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(140, 21)
-        Me.ComboBox1.TabIndex = 11
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(633, 31)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(140, 21)
-        Me.ComboBox2.TabIndex = 12
         '
         'Button1
         '
