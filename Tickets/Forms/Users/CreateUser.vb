@@ -1,9 +1,13 @@
 ﻿Public Class CreateUser
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
-    End Sub
+    Private Sub btnCreateUser_Click(sender As Object, e As EventArgs) Handles btnCreateUser.Click
 
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+        Dim queryCreateUser As String = "INSERT INTO ticketsbd.users(name, lastname, email, password,rol) 
+                                        VALUES ('" & tbNameUser.Text & "','" & tbLastNameUser.Text & "','" & tbEmailUser.Text & "','" & tbPasswordUser.Text & "','" & cbBoxUser.SelectedIndex + 1 & "')"
+
+        createNew(queryCreateUser)
+
+
 
     End Sub
 End Class

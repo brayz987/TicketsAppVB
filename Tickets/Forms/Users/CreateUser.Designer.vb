@@ -27,15 +27,15 @@ Partial Class CreateUser
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.tbName = New System.Windows.Forms.TextBox()
+        Me.tbNameUser = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.tbRPassword = New System.Windows.Forms.TextBox()
-        Me.tbPassword = New System.Windows.Forms.TextBox()
-        Me.tbEmail = New System.Windows.Forms.TextBox()
-        Me.tbLastName = New System.Windows.Forms.TextBox()
-        Me.btnCreateUser = New System.Windows.Forms.Button()
+        Me.cbBoxUser = New System.Windows.Forms.ComboBox()
+        Me.tbPasswordUser = New System.Windows.Forms.TextBox()
+        Me.tbLastNameUser = New System.Windows.Forms.TextBox()
+        Me.tbRPasswordUser = New System.Windows.Forms.TextBox()
+        Me.tbEmailUser = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.btnCreateUser = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -71,40 +71,40 @@ Partial Class CreateUser
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(3, 193)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(66, 13)
+        Me.Label4.Size = New System.Drawing.Size(98, 13)
         Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Constraseña"
+        Me.Label4.Text = "Repetir Contraseña"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(3, 153)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(98, 13)
+        Me.Label5.Size = New System.Drawing.Size(61, 13)
         Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Repetir Contraseña"
+        Me.Label5.Text = "Contraseña"
         '
-        'tbName
+        'tbNameUser
         '
-        Me.tbName.Location = New System.Drawing.Point(118, 3)
-        Me.tbName.Name = "tbName"
-        Me.tbName.Size = New System.Drawing.Size(155, 20)
-        Me.tbName.TabIndex = 5
+        Me.tbNameUser.Location = New System.Drawing.Point(118, 3)
+        Me.tbNameUser.Name = "tbNameUser"
+        Me.tbNameUser.Size = New System.Drawing.Size(155, 20)
+        Me.tbNameUser.TabIndex = 5
         '
         'TableLayoutPanel1
         '
         Me.TableLayoutPanel1.ColumnCount = 2
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.66667!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.33333!))
-        Me.TableLayoutPanel1.Controls.Add(Me.ComboBox1, 1, 3)
-        Me.TableLayoutPanel1.Controls.Add(Me.tbRPassword, 1, 4)
-        Me.TableLayoutPanel1.Controls.Add(Me.tbLastName, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.cbBoxUser, 1, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.tbPasswordUser, 1, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.tbLastNameUser, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.tbName, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.tbNameUser, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.tbEmail, 1, 5)
-        Me.TableLayoutPanel1.Controls.Add(Me.tbPassword, 1, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.tbRPasswordUser, 1, 5)
+        Me.TableLayoutPanel1.Controls.Add(Me.tbEmailUser, 1, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.Label4, 0, 5)
         Me.TableLayoutPanel1.Controls.Add(Me.Label6, 0, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.Label5, 0, 4)
@@ -120,42 +120,42 @@ Partial Class CreateUser
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(276, 247)
         Me.TableLayoutPanel1.TabIndex = 6
         '
-        'tbRPassword
+        'cbBoxUser
         '
-        Me.tbRPassword.Location = New System.Drawing.Point(118, 156)
-        Me.tbRPassword.Name = "tbRPassword"
-        Me.tbRPassword.Size = New System.Drawing.Size(155, 20)
-        Me.tbRPassword.TabIndex = 9
+        Me.cbBoxUser.FormattingEnabled = True
+        Me.cbBoxUser.Items.AddRange(New Object() {"Super Administrador", "Administrador", "Cliente"})
+        Me.cbBoxUser.Location = New System.Drawing.Point(118, 118)
+        Me.cbBoxUser.Name = "cbBoxUser"
+        Me.cbBoxUser.Size = New System.Drawing.Size(155, 21)
+        Me.cbBoxUser.TabIndex = 8
         '
-        'tbPassword
+        'tbPasswordUser
         '
-        Me.tbPassword.Location = New System.Drawing.Point(118, 79)
-        Me.tbPassword.Name = "tbPassword"
-        Me.tbPassword.Size = New System.Drawing.Size(155, 20)
-        Me.tbPassword.TabIndex = 8
+        Me.tbPasswordUser.Location = New System.Drawing.Point(118, 156)
+        Me.tbPasswordUser.Name = "tbPasswordUser"
+        Me.tbPasswordUser.Size = New System.Drawing.Size(155, 20)
+        Me.tbPasswordUser.TabIndex = 9
         '
-        'tbEmail
+        'tbLastNameUser
         '
-        Me.tbEmail.Location = New System.Drawing.Point(118, 196)
-        Me.tbEmail.Name = "tbEmail"
-        Me.tbEmail.Size = New System.Drawing.Size(155, 20)
-        Me.tbEmail.TabIndex = 7
+        Me.tbLastNameUser.Location = New System.Drawing.Point(118, 41)
+        Me.tbLastNameUser.Name = "tbLastNameUser"
+        Me.tbLastNameUser.Size = New System.Drawing.Size(155, 20)
+        Me.tbLastNameUser.TabIndex = 6
         '
-        'tbLastName
+        'tbRPasswordUser
         '
-        Me.tbLastName.Location = New System.Drawing.Point(118, 41)
-        Me.tbLastName.Name = "tbLastName"
-        Me.tbLastName.Size = New System.Drawing.Size(155, 20)
-        Me.tbLastName.TabIndex = 6
+        Me.tbRPasswordUser.Location = New System.Drawing.Point(118, 196)
+        Me.tbRPasswordUser.Name = "tbRPasswordUser"
+        Me.tbRPasswordUser.Size = New System.Drawing.Size(155, 20)
+        Me.tbRPasswordUser.TabIndex = 7
         '
-        'btnCreateUser
+        'tbEmailUser
         '
-        Me.btnCreateUser.Location = New System.Drawing.Point(214, 277)
-        Me.btnCreateUser.Name = "btnCreateUser"
-        Me.btnCreateUser.Size = New System.Drawing.Size(86, 28)
-        Me.btnCreateUser.TabIndex = 7
-        Me.btnCreateUser.Text = "Crear"
-        Me.btnCreateUser.UseVisualStyleBackColor = True
+        Me.tbEmailUser.Location = New System.Drawing.Point(118, 79)
+        Me.tbEmailUser.Name = "tbEmailUser"
+        Me.tbEmailUser.Size = New System.Drawing.Size(155, 20)
+        Me.tbEmailUser.TabIndex = 8
         '
         'Label6
         '
@@ -166,14 +166,14 @@ Partial Class CreateUser
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Rol"
         '
-        'ComboBox1
+        'btnCreateUser
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Super Administrador", "Administrador", "Cliente"})
-        Me.ComboBox1.Location = New System.Drawing.Point(118, 118)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(155, 21)
-        Me.ComboBox1.TabIndex = 8
+        Me.btnCreateUser.Location = New System.Drawing.Point(214, 277)
+        Me.btnCreateUser.Name = "btnCreateUser"
+        Me.btnCreateUser.Size = New System.Drawing.Size(86, 28)
+        Me.btnCreateUser.TabIndex = 7
+        Me.btnCreateUser.Text = "Crear"
+        Me.btnCreateUser.UseVisualStyleBackColor = True
         '
         'CreateUser
         '
@@ -197,13 +197,13 @@ Partial Class CreateUser
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents tbName As TextBox
+    Friend WithEvents tbNameUser As TextBox
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents tbRPassword As TextBox
-    Friend WithEvents tbPassword As TextBox
-    Friend WithEvents tbEmail As TextBox
-    Friend WithEvents tbLastName As TextBox
+    Friend WithEvents tbPasswordUser As TextBox
+    Friend WithEvents tbEmailUser As TextBox
+    Friend WithEvents tbRPasswordUser As TextBox
+    Friend WithEvents tbLastNameUser As TextBox
     Friend WithEvents btnCreateUser As Button
     Friend WithEvents Label6 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cbBoxUser As ComboBox
 End Class

@@ -80,13 +80,13 @@ Partial Class Home
         'CreateUserToolStripMenuItem
         '
         Me.CreateUserToolStripMenuItem.Name = "CreateUserToolStripMenuItem"
-        Me.CreateUserToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
+        Me.CreateUserToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CreateUserToolStripMenuItem.Text = "Crear"
         '
         'AdminUsersToolStripMenuItem
         '
         Me.AdminUsersToolStripMenuItem.Name = "AdminUsersToolStripMenuItem"
-        Me.AdminUsersToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
+        Me.AdminUsersToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AdminUsersToolStripMenuItem.Text = "Administrar"
         '
         'SessionToolStripMenuItem

@@ -1,6 +1,7 @@
 ﻿
 Public Class Home
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        openConn()
         Dim fr As Form = Application.OpenForms.OfType(Of Form)().Where(Function(frm) frm.Name = "Login").SingleOrDefault()
         If fr Is Nothing Then
             Dim fmLogin As New Login
@@ -42,5 +43,9 @@ Public Class Home
 
     Private Sub CloseSessionToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CloseSessionToolStripMenuItem1.Click
         Me.Close()
+    End Sub
+
+    Private Sub AdminUsersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdminUsersToolStripMenuItem.Click
+        LoadForm("AdminUsers")
     End Sub
 End Class
