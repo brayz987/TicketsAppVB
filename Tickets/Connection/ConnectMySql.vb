@@ -1,11 +1,13 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Security.Cryptography
+Imports System.Text
+Imports MySql.Data.MySqlClient
 
 Module ConnectMySql
 
     Dim conex As String = "server=localhost; Port=3306; user id=root;password=;"
     Dim MySqlConex As MySqlConnection = New MySqlConnection(conex)
 
-    Private result As String
+    Private result As Integer
     Private command As New MySqlCommand
     Private adapter As MySqlDataAdapter
     Private dataTable As DataTable
@@ -27,30 +29,27 @@ Module ConnectMySql
     End Sub
 
 
-    Public Sub createNew(query As String)
+    Public Function ConsultaNonQuery(query As String) As Integer
         Try
             openConn()
             With command
                 .Connection = MySqlConex
                 .CommandText = query
                 result = command.ExecuteNonQuery
-                If result > 0 Then
-                    MsgBox("Success")
-                Else
-                    MsgBox("Not Success")
-                End If
             End With
         Catch ex As Exception
-            Console.WriteLine(ex)
+            Console.WriteLine(ex.ToString())
         End Try
         closeConn()
-    End Sub
+
+        Return result
+    End Function
 
 
-    Public Sub Consulta(query As String, data As Object)
+    ' Esta consulta llena los datos en un dataTable el cual se puede reutilizar en cualquier momento
+    Public Sub ConsultaDataTable(query As String, dataTable As DataTable)
 
         Try
-            dataTable = New DataTable
             adapter = New MySqlDataAdapter
             openConn()
             With command
@@ -60,15 +59,23 @@ Module ConnectMySql
 
             adapter.SelectCommand = command
             adapter.Fill(dataTable)
-            data.datasource = dataTable
 
         Catch ex As Exception
             Console.WriteLine(ex)
         End Try
 
         closeConn()
-        dataTable.Dispose()
 
     End Sub
+
+
+    'Este metodo ayuda con el hash de la contrase;a
+    Public Function Hash512(password As String) As String
+        Dim convertedToBytes As Byte() = Encoding.UTF8.GetBytes(password & "TicketsApp")
+        Dim hashType As HashAlgorithm = New SHA512Managed()
+        Dim hashBytes As Byte() = hashType.ComputeHash(convertedToBytes)
+        Dim hashedResult As String = Convert.ToBase64String(hashBytes)
+        Return hashedResult
+    End Function
 
 End Module

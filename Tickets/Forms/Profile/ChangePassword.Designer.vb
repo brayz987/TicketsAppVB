@@ -23,13 +23,13 @@ Partial Class ChangePassword
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.tbNewPassR = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.tbNewPass = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.tbActualPass = New System.Windows.Forms.TextBox()
+        Me.btnResetPass = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -39,11 +39,11 @@ Partial Class ChangePassword
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.57367!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.42633!))
         Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.TextBox3, 1, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.tbNewPassR, 1, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.TextBox2, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.tbNewPass, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.TextBox1, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.tbActualPass, 1, 0)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(12, 12)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 3
@@ -52,51 +52,6 @@ Partial Class ChangePassword
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(319, 87)
         Me.TableLayoutPanel1.TabIndex = 0
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(253, 110)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Actualizar"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(22, 8)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(94, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Contraseña Actual"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TextBox1.Location = New System.Drawing.Point(142, 4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(174, 20)
-        Me.TextBox1.TabIndex = 1
-        '
-        'Label2
-        '
-        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(21, 37)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(96, 13)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Nueva Contraseña"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TextBox2.Location = New System.Drawing.Point(142, 33)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(174, 20)
-        Me.TextBox2.TabIndex = 3
         '
         'Label3
         '
@@ -108,20 +63,68 @@ Partial Class ChangePassword
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Repetir Contraseña"
         '
-        'TextBox3
+        'tbNewPassR
         '
-        Me.TextBox3.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TextBox3.Location = New System.Drawing.Point(142, 62)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(174, 20)
-        Me.TextBox3.TabIndex = 5
+        Me.tbNewPassR.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.tbNewPassR.Location = New System.Drawing.Point(142, 62)
+        Me.tbNewPassR.Name = "tbNewPassR"
+        Me.tbNewPassR.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.tbNewPassR.Size = New System.Drawing.Size(174, 20)
+        Me.tbNewPassR.TabIndex = 5
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(21, 37)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(96, 13)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Nueva Contraseña"
+        '
+        'tbNewPass
+        '
+        Me.tbNewPass.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.tbNewPass.Location = New System.Drawing.Point(142, 33)
+        Me.tbNewPass.Name = "tbNewPass"
+        Me.tbNewPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.tbNewPass.Size = New System.Drawing.Size(174, 20)
+        Me.tbNewPass.TabIndex = 3
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(22, 8)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(94, 13)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Contraseña Actual"
+        '
+        'tbActualPass
+        '
+        Me.tbActualPass.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.tbActualPass.Location = New System.Drawing.Point(142, 4)
+        Me.tbActualPass.Name = "tbActualPass"
+        Me.tbActualPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.tbActualPass.Size = New System.Drawing.Size(174, 20)
+        Me.tbActualPass.TabIndex = 1
+        '
+        'btnResetPass
+        '
+        Me.btnResetPass.Location = New System.Drawing.Point(253, 110)
+        Me.btnResetPass.Name = "btnResetPass"
+        Me.btnResetPass.Size = New System.Drawing.Size(75, 23)
+        Me.btnResetPass.TabIndex = 1
+        Me.btnResetPass.Text = "Actualizar"
+        Me.btnResetPass.UseVisualStyleBackColor = True
         '
         'ChangePassword
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(343, 145)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnResetPass)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "ChangePassword"
@@ -135,10 +138,10 @@ Partial Class ChangePassword
 
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents tbNewPassR As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents tbNewPass As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents tbActualPass As TextBox
+    Friend WithEvents btnResetPass As Button
 End Class

@@ -133,6 +133,7 @@ Partial Class CreateUser
         '
         Me.tbPasswordUser.Location = New System.Drawing.Point(118, 156)
         Me.tbPasswordUser.Name = "tbPasswordUser"
+        Me.tbPasswordUser.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.tbPasswordUser.Size = New System.Drawing.Size(155, 20)
         Me.tbPasswordUser.TabIndex = 9
         '
@@ -147,6 +148,7 @@ Partial Class CreateUser
         '
         Me.tbRPasswordUser.Location = New System.Drawing.Point(118, 196)
         Me.tbRPasswordUser.Name = "tbRPasswordUser"
+        Me.tbRPasswordUser.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.tbRPasswordUser.Size = New System.Drawing.Size(155, 20)
         Me.tbRPasswordUser.TabIndex = 7
         '

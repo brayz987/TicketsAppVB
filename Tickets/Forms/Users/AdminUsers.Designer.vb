@@ -23,21 +23,23 @@ Partial Class AdminUsers
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.dgvUsers = New System.Windows.Forms.DataGridView()
-        Me.btnQueryUsers = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.cbRol = New System.Windows.Forms.ComboBox()
-        Me.txtLastName = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtName = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtCorreo = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.idUsers = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nameUsers = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.lastnameUsers = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.emailUsers = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.rol = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.cbRol = New System.Windows.Forms.ComboBox()
+        Me.txtLastName = New System.Windows.Forms.TextBox()
+        Me.txtName = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtCorreo = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnEditUser = New System.Windows.Forms.Button()
+        Me.txtIdUser = New System.Windows.Forms.TextBox()
+        Me.btnDeleteUser = New System.Windows.Forms.Button()
         CType(Me.dgvUsers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -46,19 +48,40 @@ Partial Class AdminUsers
         '
         Me.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvUsers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idUsers, Me.nameUsers, Me.lastnameUsers, Me.emailUsers, Me.rol})
-        Me.dgvUsers.Location = New System.Drawing.Point(386, 3)
+        Me.dgvUsers.Location = New System.Drawing.Point(305, 7)
         Me.dgvUsers.Name = "dgvUsers"
-        Me.dgvUsers.Size = New System.Drawing.Size(543, 347)
+        Me.dgvUsers.Size = New System.Drawing.Size(543, 204)
         Me.dgvUsers.TabIndex = 0
         '
-        'btnQueryUsers
+        'idUsers
         '
-        Me.btnQueryUsers.Location = New System.Drawing.Point(952, 10)
-        Me.btnQueryUsers.Name = "btnQueryUsers"
-        Me.btnQueryUsers.Size = New System.Drawing.Size(82, 46)
-        Me.btnQueryUsers.TabIndex = 1
-        Me.btnQueryUsers.Text = "Consultar"
-        Me.btnQueryUsers.UseVisualStyleBackColor = True
+        Me.idUsers.DataPropertyName = "id"
+        Me.idUsers.HeaderText = "ID"
+        Me.idUsers.Name = "idUsers"
+        '
+        'nameUsers
+        '
+        Me.nameUsers.DataPropertyName = "name"
+        Me.nameUsers.HeaderText = "Nombre"
+        Me.nameUsers.Name = "nameUsers"
+        '
+        'lastnameUsers
+        '
+        Me.lastnameUsers.DataPropertyName = "lastname"
+        Me.lastnameUsers.HeaderText = "Apellido"
+        Me.lastnameUsers.Name = "lastnameUsers"
+        '
+        'emailUsers
+        '
+        Me.emailUsers.DataPropertyName = "email"
+        Me.emailUsers.HeaderText = "Correo"
+        Me.emailUsers.Name = "emailUsers"
+        '
+        'rol
+        '
+        Me.rol.DataPropertyName = "rol"
+        Me.rol.HeaderText = "Rol"
+        Me.rol.Name = "rol"
         '
         'TableLayoutPanel1
         '
@@ -73,7 +96,7 @@ Partial Class AdminUsers
         Me.TableLayoutPanel1.Controls.Add(Me.txtCorreo, 1, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.Label6, 0, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(57, 33)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(12, 12)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 4
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -98,15 +121,6 @@ Partial Class AdminUsers
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.Size = New System.Drawing.Size(155, 20)
         Me.txtLastName.TabIndex = 6
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(3, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(49, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Nombres"
         '
         'txtName
         '
@@ -149,55 +163,63 @@ Partial Class AdminUsers
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Rol"
         '
-        'idUsers
+        'Label1
         '
-        Me.idUsers.DataPropertyName = "id"
-        Me.idUsers.HeaderText = "ID"
-        Me.idUsers.Name = "idUsers"
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(3, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(49, 13)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Nombres"
         '
-        'nameUsers
+        'btnEditUser
         '
-        Me.nameUsers.DataPropertyName = "name"
-        Me.nameUsers.HeaderText = "Nombre"
-        Me.nameUsers.Name = "nameUsers"
+        Me.btnEditUser.Location = New System.Drawing.Point(206, 165)
+        Me.btnEditUser.Name = "btnEditUser"
+        Me.btnEditUser.Size = New System.Drawing.Size(82, 46)
+        Me.btnEditUser.TabIndex = 8
+        Me.btnEditUser.Text = "Editar"
+        Me.btnEditUser.UseVisualStyleBackColor = True
         '
-        'lastnameUsers
+        'txtIdUser
         '
-        Me.lastnameUsers.DataPropertyName = "lastname"
-        Me.lastnameUsers.HeaderText = "Apellido"
-        Me.lastnameUsers.Name = "lastnameUsers"
+        Me.txtIdUser.Location = New System.Drawing.Point(18, -11)
+        Me.txtIdUser.Name = "txtIdUser"
+        Me.txtIdUser.Size = New System.Drawing.Size(100, 20)
+        Me.txtIdUser.TabIndex = 9
+        Me.txtIdUser.Visible = False
         '
-        'emailUsers
+        'btnDeleteUser
         '
-        Me.emailUsers.DataPropertyName = "email"
-        Me.emailUsers.HeaderText = "Correo"
-        Me.emailUsers.Name = "emailUsers"
-        '
-        'rol
-        '
-        Me.rol.DataPropertyName = "rol"
-        Me.rol.HeaderText = "Rol"
-        Me.rol.Name = "rol"
+        Me.btnDeleteUser.Location = New System.Drawing.Point(118, 165)
+        Me.btnDeleteUser.Name = "btnDeleteUser"
+        Me.btnDeleteUser.Size = New System.Drawing.Size(82, 46)
+        Me.btnDeleteUser.TabIndex = 10
+        Me.btnDeleteUser.Text = "Eliminar"
+        Me.btnDeleteUser.UseVisualStyleBackColor = True
         '
         'AdminUsers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1046, 349)
+        Me.ClientSize = New System.Drawing.Size(865, 228)
+        Me.Controls.Add(Me.btnDeleteUser)
+        Me.Controls.Add(Me.txtIdUser)
+        Me.Controls.Add(Me.btnEditUser)
         Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Controls.Add(Me.btnQueryUsers)
         Me.Controls.Add(Me.dgvUsers)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "AdminUsers"
         Me.Text = "AdminUsers"
         CType(Me.dgvUsers, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents dgvUsers As DataGridView
-    Friend WithEvents btnQueryUsers As Button
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents cbRol As ComboBox
     Friend WithEvents txtLastName As TextBox
@@ -212,4 +234,7 @@ Partial Class AdminUsers
     Friend WithEvents lastnameUsers As DataGridViewTextBoxColumn
     Friend WithEvents emailUsers As DataGridViewTextBoxColumn
     Friend WithEvents rol As DataGridViewTextBoxColumn
+    Friend WithEvents btnEditUser As Button
+    Friend WithEvents txtIdUser As TextBox
+    Friend WithEvents btnDeleteUser As Button
 End Class

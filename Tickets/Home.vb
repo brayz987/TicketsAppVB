@@ -1,17 +1,12 @@
 ﻿
 Public Class Home
-    Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        openConn()
-        Dim fr As Form = Application.OpenForms.OfType(Of Form)().Where(Function(frm) frm.Name = "Login").SingleOrDefault()
-        If fr Is Nothing Then
-            Dim fmLogin As New Login
-            fmLogin.MdiParent = Me
-            fmLogin.Width = Me.ClientSize.Width
-            fmLogin.Height = Me.ClientSize.Height
-            fmLogin.Dock = DockStyle.Fill
-            fmLogin.Show()
-        End If
+    Private Sub Home_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        Login.Close()
     End Sub
+    Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
 
 
     'Esta funcion carga algun formulario solo pasando el nombre
@@ -42,10 +37,11 @@ Public Class Home
     End Sub
 
     Private Sub CloseSessionToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CloseSessionToolStripMenuItem1.Click
-        Me.Close()
+        End
     End Sub
 
     Private Sub AdminUsersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdminUsersToolStripMenuItem.Click
         LoadForm("AdminUsers")
     End Sub
+
 End Class
