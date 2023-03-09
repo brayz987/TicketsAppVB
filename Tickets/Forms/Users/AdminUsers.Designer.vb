@@ -23,11 +23,6 @@ Partial Class AdminUsers
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.dgvUsers = New System.Windows.Forms.DataGridView()
-        Me.idUsers = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nameUsers = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.lastnameUsers = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.emailUsers = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.rol = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.cbRol = New System.Windows.Forms.ComboBox()
         Me.txtLastName = New System.Windows.Forms.TextBox()
@@ -40,6 +35,11 @@ Partial Class AdminUsers
         Me.btnEditUser = New System.Windows.Forms.Button()
         Me.txtIdUser = New System.Windows.Forms.TextBox()
         Me.btnDeleteUser = New System.Windows.Forms.Button()
+        Me.USUARIO_Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.USUARIO_Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.USUARIO_Apellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.USUARIO_Correo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.USUARIO_Rol = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgvUsers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -47,41 +47,11 @@ Partial Class AdminUsers
         'dgvUsers
         '
         Me.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvUsers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idUsers, Me.nameUsers, Me.lastnameUsers, Me.emailUsers, Me.rol})
+        Me.dgvUsers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.USUARIO_Id, Me.USUARIO_Nombre, Me.USUARIO_Apellido, Me.USUARIO_Correo, Me.USUARIO_Rol})
         Me.dgvUsers.Location = New System.Drawing.Point(305, 7)
         Me.dgvUsers.Name = "dgvUsers"
         Me.dgvUsers.Size = New System.Drawing.Size(543, 204)
         Me.dgvUsers.TabIndex = 0
-        '
-        'idUsers
-        '
-        Me.idUsers.DataPropertyName = "id"
-        Me.idUsers.HeaderText = "ID"
-        Me.idUsers.Name = "idUsers"
-        '
-        'nameUsers
-        '
-        Me.nameUsers.DataPropertyName = "name"
-        Me.nameUsers.HeaderText = "Nombre"
-        Me.nameUsers.Name = "nameUsers"
-        '
-        'lastnameUsers
-        '
-        Me.lastnameUsers.DataPropertyName = "lastname"
-        Me.lastnameUsers.HeaderText = "Apellido"
-        Me.lastnameUsers.Name = "lastnameUsers"
-        '
-        'emailUsers
-        '
-        Me.emailUsers.DataPropertyName = "email"
-        Me.emailUsers.HeaderText = "Correo"
-        Me.emailUsers.Name = "emailUsers"
-        '
-        'rol
-        '
-        Me.rol.DataPropertyName = "rol"
-        Me.rol.HeaderText = "Rol"
-        Me.rol.Name = "rol"
         '
         'TableLayoutPanel1
         '
@@ -109,7 +79,7 @@ Partial Class AdminUsers
         'cbRol
         '
         Me.cbRol.FormattingEnabled = True
-        Me.cbRol.Items.AddRange(New Object() {"Super Administrador", "Administrador", "Cliente"})
+        Me.cbRol.Items.AddRange(New Object() {"Super Administrador", "Administrador", "Colaborador"})
         Me.cbRol.Location = New System.Drawing.Point(118, 112)
         Me.cbRol.Name = "cbRol"
         Me.cbRol.Size = New System.Drawing.Size(155, 21)
@@ -198,6 +168,36 @@ Partial Class AdminUsers
         Me.btnDeleteUser.Text = "Eliminar"
         Me.btnDeleteUser.UseVisualStyleBackColor = True
         '
+        'USUARIO_Id
+        '
+        Me.USUARIO_Id.DataPropertyName = "USUARIO_Id"
+        Me.USUARIO_Id.HeaderText = "ID"
+        Me.USUARIO_Id.Name = "USUARIO_Id"
+        '
+        'USUARIO_Nombre
+        '
+        Me.USUARIO_Nombre.DataPropertyName = "USUARIO_Nombre"
+        Me.USUARIO_Nombre.HeaderText = "Nombre"
+        Me.USUARIO_Nombre.Name = "USUARIO_Nombre"
+        '
+        'USUARIO_Apellido
+        '
+        Me.USUARIO_Apellido.DataPropertyName = "USUARIO_Apellido"
+        Me.USUARIO_Apellido.HeaderText = "Apellido"
+        Me.USUARIO_Apellido.Name = "USUARIO_Apellido"
+        '
+        'USUARIO_Correo
+        '
+        Me.USUARIO_Correo.DataPropertyName = "USUARIO_Correo"
+        Me.USUARIO_Correo.HeaderText = "Correo"
+        Me.USUARIO_Correo.Name = "USUARIO_Correo"
+        '
+        'USUARIO_Rol
+        '
+        Me.USUARIO_Rol.DataPropertyName = "USUARIO_Rol"
+        Me.USUARIO_Rol.HeaderText = "Rol"
+        Me.USUARIO_Rol.Name = "USUARIO_Rol"
+        '
         'AdminUsers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -229,12 +229,12 @@ Partial Class AdminUsers
     Friend WithEvents txtCorreo As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents idUsers As DataGridViewTextBoxColumn
-    Friend WithEvents nameUsers As DataGridViewTextBoxColumn
-    Friend WithEvents lastnameUsers As DataGridViewTextBoxColumn
-    Friend WithEvents emailUsers As DataGridViewTextBoxColumn
-    Friend WithEvents rol As DataGridViewTextBoxColumn
     Friend WithEvents btnEditUser As Button
     Friend WithEvents txtIdUser As TextBox
     Friend WithEvents btnDeleteUser As Button
+    Friend WithEvents USUARIO_Id As DataGridViewTextBoxColumn
+    Friend WithEvents USUARIO_Nombre As DataGridViewTextBoxColumn
+    Friend WithEvents USUARIO_Apellido As DataGridViewTextBoxColumn
+    Friend WithEvents USUARIO_Correo As DataGridViewTextBoxColumn
+    Friend WithEvents USUARIO_Rol As DataGridViewTextBoxColumn
 End Class

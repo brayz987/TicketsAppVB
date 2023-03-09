@@ -44,8 +44,8 @@ Public Class CreateUser
         Dim strPassword = Hash512(tbPasswordUser.Text)
 
         If valido Then
-            Dim queryCreateUser As String = "INSERT INTO ticketsbd.users(name, lastname, email, password,rol) 
-                                        VALUES ('" & tbNameUser.Text & "','" & tbLastNameUser.Text & "','" & tbEmailUser.Text & "','" & strPassword & "','" & cbBoxUser.SelectedIndex + 1 & "')"
+            Dim queryCreateUser As String = "INSERT INTO gticket.usuario(USUARIO_IdProyecto, USUARIO_Nombre, USUARIO_Apellido, USUARIO_Correo, USUARIO_Password,USUARIO_Estado,USUARIO_Eliminado, USUARIO_Rol) 
+                                        VALUES ('1','" & tbNameUser.Text & "','" & tbLastNameUser.Text & "','" & tbEmailUser.Text & "','" & strPassword & "','1','0','" & cbBoxUser.SelectedIndex + 1 & "')"
 
             Dim res As Integer = ConsultaNonQuery(queryCreateUser)
 
@@ -58,6 +58,10 @@ Public Class CreateUser
         End If
 
 
+
+    End Sub
+
+    Private Sub CreateUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

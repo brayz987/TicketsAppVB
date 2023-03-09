@@ -4,7 +4,7 @@ Imports MySql.Data.MySqlClient
 
 Module ConnectMySql
 
-    Dim conex As String = "server=localhost; Port=3306; user id=root;password=;"
+    Dim conex As String = "server=myticket-bd.mysql.database.azure.com; Port=3306; user id=ticketAdmin;password=MyT1ck3t2023*;"
     Dim MySqlConex As MySqlConnection = New MySqlConnection(conex)
 
     Private result As Integer
@@ -69,7 +69,7 @@ Module ConnectMySql
     End Sub
 
 
-    'Este metodo ayuda con el hash de la contrase;a
+    'Este metodo ayuda con el hash de la contraseña
     Public Function Hash512(password As String) As String
         Dim convertedToBytes As Byte() = Encoding.UTF8.GetBytes(password & "TicketsApp")
         Dim hashType As HashAlgorithm = New SHA512Managed()

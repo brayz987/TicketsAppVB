@@ -24,7 +24,7 @@ Public Class Login
 
         If valido Then
             Try
-                Dim queryLogin As String = "SELECT * FROM ticketsbd.users WHERE email = '" & tbEmailLogin.Text & "' AND password = '" & Hash512(tbPassLogin.Text) & "' LIMIT 1"
+                Dim queryLogin As String = "SELECT * FROM gticket.usuario WHERE USUARIO_Correo = '" & tbEmailLogin.Text & "' AND USUARIO_Password = '" & Hash512(tbPassLogin.Text) & "' LIMIT 1"
                 Dim dt As DataTable = New DataTable
                 ConsultaDataTable(queryLogin, dt)
 
@@ -34,7 +34,7 @@ Public Class Login
                 'Aqui se valida si no esta vacio
                 If Not row Is Nothing Then
                     'Guardamos el id del usuario que se logeo
-                    idUserLogin = row("id")
+                    idUserLogin = row("USUARIO_Id")
                     Home.Show()
                     Me.Hide()
                 Else

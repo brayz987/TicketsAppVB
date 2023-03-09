@@ -28,7 +28,7 @@ Public Class ChangePassword
 
             Try
                 'Validamos si la contraseña actual coincide
-                Dim queryValidPass As String = "SELECT * FROM ticketsbd.users WHERE id = '" & Login.idUserLogin & "' AND password = '" & strActualPassword & "' LIMIT 1"
+                Dim queryValidPass As String = "SELECT * FROM gticket.usuario WHERE USUARIO_Id = '" & Login.idUserLogin & "' AND USUARIO_Password = '" & strActualPassword & "' LIMIT 1"
                 Dim dt As DataTable = New DataTable
                 ConsultaDataTable(queryValidPass, dt)
 
@@ -53,7 +53,7 @@ Public Class ChangePassword
             'Si el pass actual es valido entonces hacemos el update
             If passValido Then
                 Try
-                    Dim queryUpdatePass As String = "UPDATE ticketsbd.users SET password='" & strNewPassword & "' WHERE id='" & Login.idUserLogin & "'"
+                    Dim queryUpdatePass As String = "UPDATE gticket.usuario SET USUARIO_Password='" & strNewPassword & "' WHERE USUARIO_Id='" & Login.idUserLogin & "'"
                     Dim res As Integer = ConsultaNonQuery(queryUpdatePass)
                     If res > 0 Then
                         Dim resMsgBox = MsgBox("Se actualizo correctamente la contraseña")

@@ -123,7 +123,7 @@ Partial Class CreateUser
         'cbBoxUser
         '
         Me.cbBoxUser.FormattingEnabled = True
-        Me.cbBoxUser.Items.AddRange(New Object() {"Super Administrador", "Administrador", "Cliente"})
+        Me.cbBoxUser.Items.AddRange(New Object() {"Super Administrador", "Administrador", "Colaborador"})
         Me.cbBoxUser.Location = New System.Drawing.Point(118, 118)
         Me.cbBoxUser.Name = "cbBoxUser"
         Me.cbBoxUser.Size = New System.Drawing.Size(155, 21)
