@@ -59,61 +59,41 @@ Partial Class AdminUsers
         '
         Me.USUARIO_Id.DataPropertyName = "USUARIO_Id"
         Me.USUARIO_Id.HeaderText = "ID"
-<<<<<<< Updated upstream
-        Me.USUARIO_Id.Name = "USUARIO_Id"
-=======
         Me.USUARIO_Id.MinimumWidth = 8
         Me.USUARIO_Id.Name = "USUARIO_Id"
         Me.USUARIO_Id.Width = 150
->>>>>>> Stashed changes
         '
         'USUARIO_Nombre
         '
         Me.USUARIO_Nombre.DataPropertyName = "USUARIO_Nombre"
         Me.USUARIO_Nombre.HeaderText = "Nombre"
-<<<<<<< Updated upstream
-        Me.USUARIO_Nombre.Name = "USUARIO_Nombre"
-=======
         Me.USUARIO_Nombre.MinimumWidth = 8
         Me.USUARIO_Nombre.Name = "USUARIO_Nombre"
         Me.USUARIO_Nombre.Width = 150
->>>>>>> Stashed changes
         '
         'USUARIO_Apellido
         '
         Me.USUARIO_Apellido.DataPropertyName = "USUARIO_Apellido"
         Me.USUARIO_Apellido.HeaderText = "Apellido"
-<<<<<<< Updated upstream
-        Me.USUARIO_Apellido.Name = "USUARIO_Apellido"
-=======
         Me.USUARIO_Apellido.MinimumWidth = 8
         Me.USUARIO_Apellido.Name = "USUARIO_Apellido"
         Me.USUARIO_Apellido.Width = 150
->>>>>>> Stashed changes
         '
         'USUARIO_Correo
         '
         Me.USUARIO_Correo.DataPropertyName = "USUARIO_Correo"
         Me.USUARIO_Correo.HeaderText = "Correo"
-<<<<<<< Updated upstream
-        Me.USUARIO_Correo.Name = "USUARIO_Correo"
-=======
         Me.USUARIO_Correo.MinimumWidth = 8
         Me.USUARIO_Correo.Name = "USUARIO_Correo"
         Me.USUARIO_Correo.Width = 150
->>>>>>> Stashed changes
         '
         'USUARIO_Rol
         '
         Me.USUARIO_Rol.DataPropertyName = "USUARIO_Rol"
         Me.USUARIO_Rol.HeaderText = "Rol"
-<<<<<<< Updated upstream
-        Me.USUARIO_Rol.Name = "USUARIO_Rol"
-=======
         Me.USUARIO_Rol.MinimumWidth = 8
         Me.USUARIO_Rol.Name = "USUARIO_Rol"
         Me.USUARIO_Rol.Width = 150
->>>>>>> Stashed changes
         '
         'TableLayoutPanel1
         '
