@@ -1,9 +1,17 @@
 ﻿Public Class TicketView
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub TicketView_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+        Try
+            Dim sql As String = "SELECT USUARIO_Id, CONCAT(USUARIO_Nombre, ' ', USUARIO_Apellido) as nombre  FROM gticket.usuario"
+            Dim dt As DataTable = New DataTable
+            ConsultaDataTable(sql, dt)
+            cbAssignedUser.ValueMember = "USUARIO_Id"
+            cbAssignedUser.DisplayMember = "nombre"
+            cbAssignedUser.DataSource = dt
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+        End Try
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-
-    End Sub
 End Class
