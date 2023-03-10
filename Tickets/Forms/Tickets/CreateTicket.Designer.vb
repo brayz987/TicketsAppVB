@@ -29,13 +29,13 @@ Partial Class CreateTicket
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtDescripcion = New System.Windows.Forms.TextBox()
+        Me.txtTitulo = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.listCola = New System.Windows.Forms.ComboBox()
+        Me.listEstado = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnCreateTicket = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -51,13 +51,14 @@ Partial Class CreateTicket
         Me.TableLayoutPanel1.Controls.Add(Me.TextBox5, 1, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.Label4, 0, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.TextBox2, 1, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.TextBox1, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtDescripcion, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtTitulo, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.ComboBox1, 1, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.ComboBox2, 1, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.listCola, 1, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.listEstado, 1, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(17, 27)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(26, 42)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 6
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.38461!))
@@ -66,52 +67,57 @@ Partial Class CreateTicket
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.38461!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.38462!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.38461!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(289, 326)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(434, 502)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'Label6
         '
         Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(8, 294)
+        Me.Label6.Location = New System.Drawing.Point(13, 452)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(52, 13)
+        Me.Label6.Size = New System.Drawing.Size(77, 20)
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Adjunto 2"
         '
         'TextBox6
         '
         Me.TextBox6.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TextBox6.Location = New System.Drawing.Point(72, 290)
+        Me.TextBox6.Location = New System.Drawing.Point(109, 449)
+        Me.TextBox6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(214, 20)
+        Me.TextBox6.Size = New System.Drawing.Size(319, 26)
         Me.TextBox6.TabIndex = 11
         '
         'Label5
         '
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(8, 243)
+        Me.Label5.Location = New System.Drawing.Point(13, 374)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(52, 13)
+        Me.Label5.Size = New System.Drawing.Size(77, 20)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Adjunto 1"
         '
         'TextBox5
         '
         Me.TextBox5.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TextBox5.Location = New System.Drawing.Point(72, 240)
+        Me.TextBox5.Location = New System.Drawing.Point(109, 371)
+        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(214, 20)
+        Me.TextBox5.Size = New System.Drawing.Size(319, 26)
         Me.TextBox5.TabIndex = 9
         '
         'Label4
         '
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(14, 193)
+        Me.Label4.Location = New System.Drawing.Point(22, 297)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(40, 13)
+        Me.Label4.Size = New System.Drawing.Size(60, 20)
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Estado"
         '
@@ -119,86 +125,96 @@ Partial Class CreateTicket
         '
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(20, 143)
+        Me.Label3.Location = New System.Drawing.Point(31, 220)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(28, 13)
+        Me.Label3.Size = New System.Drawing.Size(41, 20)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Cola"
         '
-        'TextBox2
+        'txtDescripcion
         '
-        Me.TextBox2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TextBox2.Location = New System.Drawing.Point(72, 53)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(214, 69)
-        Me.TextBox2.TabIndex = 3
+        Me.txtDescripcion.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtDescripcion.Location = New System.Drawing.Point(109, 82)
+        Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtDescripcion.Multiline = True
+        Me.txtDescripcion.Name = "txtDescripcion"
+        Me.txtDescripcion.Size = New System.Drawing.Size(319, 104)
+        Me.txtDescripcion.TabIndex = 3
         '
-        'TextBox1
+        'txtTitulo
         '
-        Me.TextBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TextBox1.Location = New System.Drawing.Point(72, 15)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(214, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.txtTitulo.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtTitulo.Location = New System.Drawing.Point(109, 25)
+        Me.txtTitulo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtTitulo.Name = "txtTitulo"
+        Me.txtTitulo.Size = New System.Drawing.Size(319, 26)
+        Me.txtTitulo.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(18, 18)
+        Me.Label1.Location = New System.Drawing.Point(28, 28)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(33, 13)
+        Me.Label1.Size = New System.Drawing.Size(47, 20)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Titulo"
         '
-        'ComboBox1
+        'listCola
         '
-        Me.ComboBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Cola1", "Cola2", "Cola3"})
-        Me.ComboBox1.Location = New System.Drawing.Point(72, 139)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(214, 21)
-        Me.ComboBox1.TabIndex = 12
+        Me.listCola.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.listCola.FormattingEnabled = True
+        Me.listCola.Items.AddRange(New Object() {"Inventarios", "Compras", "Comercial"})
+        Me.listCola.Location = New System.Drawing.Point(109, 216)
+        Me.listCola.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.listCola.Name = "listCola"
+        Me.listCola.Size = New System.Drawing.Size(319, 28)
+        Me.listCola.TabIndex = 12
         '
-        'ComboBox2
+        'listEstado
         '
-        Me.ComboBox2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"Nuevo", "En Progreso", "Pausa", "Solucionado", "Solicitando Informacion", "Cerrado"})
-        Me.ComboBox2.Location = New System.Drawing.Point(72, 189)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(214, 21)
-        Me.ComboBox2.TabIndex = 13
+        Me.listEstado.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.listEstado.FormattingEnabled = True
+        Me.listEstado.Items.AddRange(New Object() {"Nuevo", "En Progreso", "Pausa", "Solucionado", "Información requerida", "Cerrado"})
+        Me.listEstado.Location = New System.Drawing.Point(109, 293)
+        Me.listEstado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.listEstado.Name = "listEstado"
+        Me.listEstado.Size = New System.Drawing.Size(319, 28)
+        Me.listEstado.TabIndex = 13
         '
         'Label2
         '
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(3, 50)
+        Me.Label2.Location = New System.Drawing.Point(6, 77)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(63, 13)
+        Me.Label2.Size = New System.Drawing.Size(92, 20)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Descripcion"
         '
-        'Button1
+        'btnCreateTicket
         '
-        Me.Button1.Location = New System.Drawing.Point(231, 396)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Crear"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnCreateTicket.AccessibleName = "btnCreateTicket"
+        Me.btnCreateTicket.Location = New System.Drawing.Point(346, 609)
+        Me.btnCreateTicket.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnCreateTicket.Name = "btnCreateTicket"
+        Me.btnCreateTicket.Size = New System.Drawing.Size(112, 35)
+        Me.btnCreateTicket.TabIndex = 1
+        Me.btnCreateTicket.Text = "Crear"
+        Me.btnCreateTicket.UseVisualStyleBackColor = True
         '
         'CreateTicket
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(326, 431)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(489, 663)
+        Me.Controls.Add(Me.btnCreateTicket)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "CreateTicket"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CrearTicket"
@@ -216,10 +232,10 @@ Partial Class CreateTicket
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtDescripcion As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents txtTitulo As TextBox
+    Friend WithEvents btnCreateTicket As Button
+    Friend WithEvents listCola As ComboBox
+    Friend WithEvents listEstado As ComboBox
 End Class

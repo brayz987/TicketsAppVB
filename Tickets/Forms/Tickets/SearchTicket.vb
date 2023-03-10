@@ -1,6 +1,8 @@
 ﻿Public Class SearchTicket
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        LoadForm("TicketView")
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        listTickets.ticketId = txtId.Text
+        listTickets.ticketId = txtTitulo.Text
+        LoadForm("listTickets")
         Me.Close()
     End Sub
 

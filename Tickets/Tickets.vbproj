@@ -50,7 +50,7 @@
   <ItemGroup>
     <Reference Include="MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 8.0\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\MySQL\Connector NET 8.0\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -94,6 +94,12 @@
       <DependentUpon>CreateTicket.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\Tickets\CreateTicket.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tickets\listTickets.Designer.vb">
+      <DependentUpon>listTickets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tickets\listTickets.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Tickets\SearchTicket.Designer.vb">
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tickets\CreateTicket.resx">
       <DependentUpon>CreateTicket.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tickets\listTickets.resx">
+      <DependentUpon>listTickets.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tickets\SearchTicket.resx">
       <DependentUpon>SearchTicket.vb</DependentUpon>

@@ -20,6 +20,7 @@ Public Class Login
         If Not Regex.IsMatch(tbEmailLogin.Text, "^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$") Then
             MsgBox("Debe ingresar un correo valido")
             valido = False
+            Exit Sub
         End If
 
         If valido Then

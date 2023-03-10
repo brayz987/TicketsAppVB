@@ -11,34 +11,40 @@ Public Class CreateUser
         If tbNameUser.Text = "" Then
             MsgBox("Debe ingresar un nombre")
             valido = False
+            Exit Sub
         End If
 
         If tbLastNameUser.Text = "" Then
             MsgBox("Debe ingresar un apellido")
             valido = False
+            Exit Sub
         End If
 
 
         If cbBoxUser.SelectedIndex = -1 Then
             MsgBox("Debe de escoger un rol")
             valido = False
+            Exit Sub
         End If
 
         If Not Regex.IsMatch(tbEmailUser.Text, "^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$") Then
             MsgBox("Debe ingresar un correo valido")
             valido = False
+            Exit Sub
         End If
 
 
         If Not Regex.IsMatch(tbPasswordUser.Text, "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$") Then
             MsgBox("La contraseña debe de contener como minimo 8 caracteres, una letra mayuscula, una letra minuscula, un numero y un caracter especial")
             valido = False
+            Exit Sub
         End If
 
 
         If tbPasswordUser.Text <> tbRPasswordUser.Text Then
             MsgBox("Las constraseñas no coinciden")
             valido = False
+            Exit Sub
         End If
 
         Dim strPassword = Hash512(tbPasswordUser.Text)
@@ -56,12 +62,6 @@ Public Class CreateUser
                 MsgBox("Hubo un error al crear el usuario")
             End If
         End If
-
-
-
-    End Sub
-
-    Private Sub CreateUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

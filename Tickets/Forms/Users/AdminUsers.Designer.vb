@@ -48,40 +48,72 @@ Partial Class AdminUsers
         '
         Me.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvUsers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.USUARIO_Id, Me.USUARIO_Nombre, Me.USUARIO_Apellido, Me.USUARIO_Correo, Me.USUARIO_Rol})
-        Me.dgvUsers.Location = New System.Drawing.Point(305, 7)
+        Me.dgvUsers.Location = New System.Drawing.Point(458, 11)
+        Me.dgvUsers.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.dgvUsers.Name = "dgvUsers"
-        Me.dgvUsers.Size = New System.Drawing.Size(543, 204)
+        Me.dgvUsers.RowHeadersWidth = 62
+        Me.dgvUsers.Size = New System.Drawing.Size(814, 314)
         Me.dgvUsers.TabIndex = 0
         '
         'USUARIO_Id
         '
         Me.USUARIO_Id.DataPropertyName = "USUARIO_Id"
         Me.USUARIO_Id.HeaderText = "ID"
+<<<<<<< Updated upstream
         Me.USUARIO_Id.Name = "USUARIO_Id"
+=======
+        Me.USUARIO_Id.MinimumWidth = 8
+        Me.USUARIO_Id.Name = "USUARIO_Id"
+        Me.USUARIO_Id.Width = 150
+>>>>>>> Stashed changes
         '
         'USUARIO_Nombre
         '
         Me.USUARIO_Nombre.DataPropertyName = "USUARIO_Nombre"
         Me.USUARIO_Nombre.HeaderText = "Nombre"
+<<<<<<< Updated upstream
         Me.USUARIO_Nombre.Name = "USUARIO_Nombre"
+=======
+        Me.USUARIO_Nombre.MinimumWidth = 8
+        Me.USUARIO_Nombre.Name = "USUARIO_Nombre"
+        Me.USUARIO_Nombre.Width = 150
+>>>>>>> Stashed changes
         '
         'USUARIO_Apellido
         '
         Me.USUARIO_Apellido.DataPropertyName = "USUARIO_Apellido"
         Me.USUARIO_Apellido.HeaderText = "Apellido"
+<<<<<<< Updated upstream
         Me.USUARIO_Apellido.Name = "USUARIO_Apellido"
+=======
+        Me.USUARIO_Apellido.MinimumWidth = 8
+        Me.USUARIO_Apellido.Name = "USUARIO_Apellido"
+        Me.USUARIO_Apellido.Width = 150
+>>>>>>> Stashed changes
         '
         'USUARIO_Correo
         '
         Me.USUARIO_Correo.DataPropertyName = "USUARIO_Correo"
         Me.USUARIO_Correo.HeaderText = "Correo"
+<<<<<<< Updated upstream
         Me.USUARIO_Correo.Name = "USUARIO_Correo"
+=======
+        Me.USUARIO_Correo.MinimumWidth = 8
+        Me.USUARIO_Correo.Name = "USUARIO_Correo"
+        Me.USUARIO_Correo.Width = 150
+>>>>>>> Stashed changes
         '
         'USUARIO_Rol
         '
         Me.USUARIO_Rol.DataPropertyName = "USUARIO_Rol"
         Me.USUARIO_Rol.HeaderText = "Rol"
+<<<<<<< Updated upstream
         Me.USUARIO_Rol.Name = "USUARIO_Rol"
+=======
+        Me.USUARIO_Rol.MinimumWidth = 8
+        Me.USUARIO_Rol.Name = "USUARIO_Rol"
+        Me.USUARIO_Rol.Width = 150
+>>>>>>> Stashed changes
         '
         'TableLayoutPanel1
         '
@@ -96,119 +128,132 @@ Partial Class AdminUsers
         Me.TableLayoutPanel1.Controls.Add(Me.txtCorreo, 1, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.Label6, 0, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(12, 12)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(18, 18)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 4
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(276, 147)
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(414, 226)
         Me.TableLayoutPanel1.TabIndex = 7
         '
         'cbRol
         '
         Me.cbRol.FormattingEnabled = True
         Me.cbRol.Items.AddRange(New Object() {"Super Administrador", "Administrador", "Colaborador"})
-        Me.cbRol.Location = New System.Drawing.Point(118, 112)
+        Me.cbRol.Location = New System.Drawing.Point(176, 173)
+        Me.cbRol.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cbRol.Name = "cbRol"
-        Me.cbRol.Size = New System.Drawing.Size(155, 21)
+        Me.cbRol.Size = New System.Drawing.Size(230, 28)
         Me.cbRol.TabIndex = 8
         '
         'txtLastName
         '
-        Me.txtLastName.Location = New System.Drawing.Point(118, 38)
+        Me.txtLastName.Location = New System.Drawing.Point(176, 59)
+        Me.txtLastName.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtLastName.Name = "txtLastName"
-        Me.txtLastName.Size = New System.Drawing.Size(155, 20)
+        Me.txtLastName.Size = New System.Drawing.Size(230, 26)
         Me.txtLastName.TabIndex = 6
         '
         'txtName
         '
-        Me.txtName.Location = New System.Drawing.Point(118, 3)
+        Me.txtName.Location = New System.Drawing.Point(176, 5)
+        Me.txtName.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(155, 20)
+        Me.txtName.Size = New System.Drawing.Size(230, 26)
         Me.txtName.TabIndex = 5
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(3, 35)
+        Me.Label2.Location = New System.Drawing.Point(4, 54)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(49, 13)
+        Me.Label2.Size = New System.Drawing.Size(73, 20)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Apellidos"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(3, 70)
+        Me.Label3.Location = New System.Drawing.Point(4, 108)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(38, 13)
+        Me.Label3.Size = New System.Drawing.Size(57, 20)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Correo"
         '
         'txtCorreo
         '
-        Me.txtCorreo.Location = New System.Drawing.Point(118, 73)
+        Me.txtCorreo.Location = New System.Drawing.Point(176, 113)
+        Me.txtCorreo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtCorreo.Name = "txtCorreo"
-        Me.txtCorreo.Size = New System.Drawing.Size(155, 20)
+        Me.txtCorreo.Size = New System.Drawing.Size(230, 26)
         Me.txtCorreo.TabIndex = 8
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(3, 109)
+        Me.Label6.Location = New System.Drawing.Point(4, 168)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(23, 13)
+        Me.Label6.Size = New System.Drawing.Size(33, 20)
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Rol"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(3, 0)
+        Me.Label1.Location = New System.Drawing.Point(4, 0)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(49, 13)
+        Me.Label1.Size = New System.Drawing.Size(73, 20)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Nombres"
         '
         'btnEditUser
         '
-        Me.btnEditUser.Location = New System.Drawing.Point(206, 165)
+        Me.btnEditUser.Location = New System.Drawing.Point(309, 254)
+        Me.btnEditUser.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnEditUser.Name = "btnEditUser"
-        Me.btnEditUser.Size = New System.Drawing.Size(82, 46)
+        Me.btnEditUser.Size = New System.Drawing.Size(123, 71)
         Me.btnEditUser.TabIndex = 8
         Me.btnEditUser.Text = "Editar"
         Me.btnEditUser.UseVisualStyleBackColor = True
         '
         'txtIdUser
         '
-        Me.txtIdUser.Location = New System.Drawing.Point(18, -11)
+        Me.txtIdUser.Location = New System.Drawing.Point(27, -17)
+        Me.txtIdUser.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtIdUser.Name = "txtIdUser"
-        Me.txtIdUser.Size = New System.Drawing.Size(100, 20)
+        Me.txtIdUser.Size = New System.Drawing.Size(148, 26)
         Me.txtIdUser.TabIndex = 9
         Me.txtIdUser.Visible = False
         '
         'btnDeleteUser
         '
-        Me.btnDeleteUser.Location = New System.Drawing.Point(118, 165)
+        Me.btnDeleteUser.Location = New System.Drawing.Point(177, 254)
+        Me.btnDeleteUser.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnDeleteUser.Name = "btnDeleteUser"
-        Me.btnDeleteUser.Size = New System.Drawing.Size(82, 46)
+        Me.btnDeleteUser.Size = New System.Drawing.Size(123, 71)
         Me.btnDeleteUser.TabIndex = 10
         Me.btnDeleteUser.Text = "Eliminar"
         Me.btnDeleteUser.UseVisualStyleBackColor = True
         '
         'AdminUsers
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(865, 228)
+        Me.ClientSize = New System.Drawing.Size(1298, 351)
         Me.Controls.Add(Me.btnDeleteUser)
         Me.Controls.Add(Me.txtIdUser)
         Me.Controls.Add(Me.btnEditUser)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.dgvUsers)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "AdminUsers"
         Me.Text = "AdminUsers"
         CType(Me.dgvUsers, System.ComponentModel.ISupportInitialize).EndInit()
