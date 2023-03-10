@@ -37,22 +37,26 @@ Public Class AdminUsers
         If txtName.Text = "" Then
             MsgBox("Debe ingresar un nombre")
             valido = False
+            Exit Sub
         End If
 
         If txtLastName.Text = "" Then
             MsgBox("Debe ingresar un apellido")
             valido = False
+            Exit Sub
         End If
 
 
         If cbRol.SelectedIndex = -1 Then
             MsgBox("Debe de escoger un rol")
             valido = False
+            Exit Sub
         End If
 
         If Not Regex.IsMatch(txtCorreo.Text, "^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$") Then
             MsgBox("Debe ingresar un correo valido")
             valido = False
+            Exit Sub
         End If
 
         If valido Then

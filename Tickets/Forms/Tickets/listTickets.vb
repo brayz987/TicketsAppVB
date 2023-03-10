@@ -33,4 +33,11 @@
 
         data.Dispose()
     End Sub
+
+    Private Sub dataTicket_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataTicket.CellClick
+        Dim myTicket As String = dataTicket.CurrentRow.Cells(0).Value
+        TicketView.idThisTicket = myTicket
+        Home.showForm("TicketView")
+        Me.Close()
+    End Sub
 End Class

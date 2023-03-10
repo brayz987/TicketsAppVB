@@ -44,4 +44,8 @@ Public Class Home
         LoadForm("AdminUsers")
     End Sub
 
+    Public Sub showForm(form As String)
+        LoadForm(form)
+    End Sub
+
 End Class

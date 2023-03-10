@@ -23,10 +23,10 @@ Partial Class listTickets
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.dataTicket = New System.Windows.Forms.DataGridView()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.titulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.estado = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.dataTicket, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -40,16 +40,6 @@ Partial Class listTickets
         Me.dataTicket.RowTemplate.Height = 28
         Me.dataTicket.Size = New System.Drawing.Size(972, 201)
         Me.dataTicket.TabIndex = 0
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(300, 54)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(558, 55)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Resultados de bùsqueda"
         '
         'id
         '
@@ -74,6 +64,16 @@ Partial Class listTickets
         Me.estado.MinimumWidth = 8
         Me.estado.Name = "estado"
         Me.estado.Width = 150
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(300, 54)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(558, 55)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Resultados de búsqueda"
         '
         'listTickets
         '
