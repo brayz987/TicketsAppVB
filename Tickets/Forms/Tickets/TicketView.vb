@@ -1,5 +1,4 @@
 ﻿Public Class TicketView
-    Public idThisTicket As String
     Private Sub TicketView_Load(sender As Object, e As EventArgs) Handles Me.Load
         Try
             Dim sql As String = "SELECT USUARIO_Id, CONCAT(USUARIO_Nombre, ' ', USUARIO_Apellido) as nombre  FROM gticket.usuario"
@@ -8,16 +7,14 @@
             cbAssignedUser.ValueMember = "USUARIO_Id"
             cbAssignedUser.DisplayMember = "nombre"
             cbAssignedUser.DataSource = dt
-
-            getTicket()
         Catch ex As Exception
             Console.WriteLine(ex.ToString())
         End Try
 
+        Me.getTicket(listTickets.idTicketSelect)
     End Sub
 
-    Private Sub getTicket()
-        MsgBox(idThisTicket)
+    Public Sub getTicket(idThisTicket As String)
         Try
             Dim sqlGet As String = "SELECT TICKET_Id,TICKET_Titulo,TICKET_Asunto,TICKET_Estado,TICKET_Cola,TICKET_IdUsuarioAsignado FROM gticket.ticket WHERE TICKET_Id=" & idThisTicket
             Dim data As DataTable = New DataTable
@@ -28,9 +25,10 @@
             'Aqui se valida si no esta vacio
             If Not row Is Nothing Then
                 'Asignamos valores a los campos del ticket
-                txtTitulo = row("TICKET_Titulo")
-                txtDescripcion = row("TICKET_Asunto")
-                txtId = row("TICKET_Id")
+                Console.WriteLine(row("TICKET_Titulo"))
+                Console.WriteLine(row("TICKET_Asunto"))
+                txtDescripcionView.Text = row("TICKET_Asunto")
+                txtIdView.Text = row("TICKET_Id")
             Else
                 MsgBox("No se encontro el ticket")
             End If

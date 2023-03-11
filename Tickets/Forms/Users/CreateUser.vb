@@ -64,4 +64,8 @@ Public Class CreateUser
         End If
 
     End Sub
+
+    Private Sub CreateUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

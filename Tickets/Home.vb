@@ -10,14 +10,16 @@ Public Class Home
 
 
     'Esta funcion carga algun formulario solo pasando el nombre
-    Private Sub LoadForm(formName As String)
+    Private Function LoadForm(formName As String) As Form
         Dim fr As Form = Application.OpenForms.OfType(Of Form)().Where(Function(frm) frm.Name = formName).SingleOrDefault()
         If fr Is Nothing Then
             Dim fmLoad As Form = System.Reflection.Assembly.GetExecutingAssembly().CreateInstance(ProductName & "." & formName)
             fmLoad.MdiParent = Me
             fmLoad.Show()
+            fr = fmLoad
         End If
-    End Sub
+        Return fr
+    End Function
 
 
     Private Sub CreateUserToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreateUserToolStripMenuItem.Click
@@ -44,8 +46,8 @@ Public Class Home
         LoadForm("AdminUsers")
     End Sub
 
-    Public Sub showForm(form As String)
-        LoadForm(form)
-    End Sub
+    Public Function showForm(form As String) As Form
+        Return LoadForm(form)
+    End Function
 
 End Class

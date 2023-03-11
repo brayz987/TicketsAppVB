@@ -1,10 +1,7 @@
 ﻿Public Class listTickets
     Public ticketId As String
     Public tituloTicket As String
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
-
-    End Sub
-
+    Public idTicketSelect As String
     Private Sub listTickets_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim data As DataTable = New DataTable
         Dim sql As String = "SELECT TICKET_Id,TICKET_Titulo,TICKET_Estado FROM gticket.ticket "
@@ -35,9 +32,8 @@
     End Sub
 
     Private Sub dataTicket_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataTicket.CellClick
-        Dim myTicket As String = dataTicket.CurrentRow.Cells(0).Value
-        TicketView.idThisTicket = myTicket
         Home.showForm("TicketView")
-        Me.Close()
+        idTicketSelect = dataTicket.CurrentRow.Cells(0).Value
+        Me.Hide()
     End Sub
 End Class

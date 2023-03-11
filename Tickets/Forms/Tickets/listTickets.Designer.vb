@@ -34,11 +34,12 @@ Partial Class listTickets
         '
         Me.dataTicket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dataTicket.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.titulo, Me.estado})
-        Me.dataTicket.Location = New System.Drawing.Point(87, 135)
+        Me.dataTicket.Location = New System.Drawing.Point(58, 88)
+        Me.dataTicket.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dataTicket.Name = "dataTicket"
         Me.dataTicket.RowHeadersWidth = 62
         Me.dataTicket.RowTemplate.Height = 28
-        Me.dataTicket.Size = New System.Drawing.Size(972, 201)
+        Me.dataTicket.Size = New System.Drawing.Size(648, 131)
         Me.dataTicket.TabIndex = 0
         '
         'id
@@ -69,19 +70,21 @@ Partial Class listTickets
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(300, 54)
+        Me.Label1.Location = New System.Drawing.Point(200, 35)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(558, 55)
+        Me.Label1.Size = New System.Drawing.Size(370, 37)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Resultados de búsqueda"
         '
         'listTickets
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1132, 450)
+        Me.ClientSize = New System.Drawing.Size(755, 292)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dataTicket)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "listTickets"
         Me.Text = "listTickets"
         CType(Me.dataTicket, System.ComponentModel.ISupportInitialize).EndInit()
